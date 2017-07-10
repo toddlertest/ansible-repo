@@ -1,20 +1,16 @@
 ---
 # tasks for deploy_jenkins_role
-- name: Make shure that wget present
-  become: true
-  apt: name=wget state=present
-
 - name: Add Jenkins repo key to the system
   become: true
-  - apt_key:
-       url: "https://pkg.jenkins.io/debian/jenkins-ci.org.key"
-       state: present
+  apt_key:
+      url: "https://pkg.jenkins.io/debian/jenkins-ci.org.key"
+      state: present
 
 - name: Add Jenkins repo to sources List
   become: true
-  - apt_repository:
-              repo: deb http://pkg.jenkins.io/debian-stable binary
-              state: present
+  apt_repository:
+            repo: deb http://pkg.jenkins.io/debian-stable binary/
+            state: present
 
 - name: Update repos
   become: true
@@ -23,3 +19,6 @@
 - name: Install Jenkins
   become: true
   apt: name=jenkins state=present
+
+- name: Make shure the Jenkins is running
+  service: name=jenkins state=running
