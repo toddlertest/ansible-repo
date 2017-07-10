@@ -2,14 +2,14 @@
   - name: Roles based AWS playbook
     hosts: local
     connection: local
-    becomes: false
+    become: false
     gather_facts: False
 
     roles:
       - create_aws_instance
   - name: After creation
     hosts: ec2hosts
-    becomes: true
+    become: true
     gather_facts: False
     roles:
        - common
