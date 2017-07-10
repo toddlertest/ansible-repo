@@ -1,5 +1,5 @@
 ---
-# DEafault vars for deploy_jenkins
+# Default vars for deploy_jenkins
   jenkins:
     url_repo_key: "https://pkg.jenkins.io/debian/jenkins-ci.org.key"
     url_repo: deb http://pkg.jenkins.io/debian-stable binary/

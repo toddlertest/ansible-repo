@@ -9,12 +9,9 @@
   apt_repository:
             repo: "{{ jenkins.url_repo }}"
             state: present
-
-- name: Update repos
-  apt: update_cache=yes
-
+            
 - name: Install Jenkins
-  apt: name=jenkins state=present
+  apt: name=jenkins state=present update_cache=yes
 
 - name: Enshure the Jenkins is running
   service: name=jenkins state=started enabled=yes
