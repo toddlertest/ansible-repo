@@ -62,4 +62,4 @@
   args:
     tags:
        #Name: webserver
-       "{{ aws_instance_tags }}"
+       "{{ aws.instance_tags }}"
