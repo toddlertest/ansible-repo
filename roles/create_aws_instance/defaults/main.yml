@@ -1,0 +1,9 @@
+#Default variables for aws instance
+region: eu-central-1
+instance_type: t2.micro
+count: 1
+image: ami-8b92b4ee
+security_group: default_sec_group_from_ansible_role
+security_group_description: That group has been created from default settings
+#- aws_instance_tags:
+#          main_role: roles_webserver

@@ -1,0 +1,5 @@
+---
+# tasks for deploy_jenkins_role
+- name: Nginx for Test
+  become: true
+  apt: name=nginx state=present

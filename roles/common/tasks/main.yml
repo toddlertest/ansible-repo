@@ -1,0 +1,8 @@
+---
+# tasks for common  roles
+- name: Run apt update
+  become: true
+  raw: apt update -y
+- name: Install python minimal
+  become: true
+  raw: apt install python-minimal -y
