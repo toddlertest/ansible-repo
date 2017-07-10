@@ -3,8 +3,8 @@ region: us-east-2
 instance_type: t2.micro
 count: 1
 image: ami-8b92b4ee
-       ### insert path to keys !!!!
-keypair: aws_key_first
+### insert path to keys
+keypair: #Your AWS keypair name#
 security_group: default_sec_group_from_ansible_role
 security_group_description: That group has been created from default settings
 rules:
