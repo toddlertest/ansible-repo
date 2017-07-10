@@ -4,6 +4,7 @@ aws:
   instance_type: t2.micro
   instance_count: 1
   image_id: ami-8b92b4ee
+  keypair_name: #Your keypair_name#
   security_group_name: default_sec_group_from_ansible_role
   security_group_description: That group has been created from default settings
 #- aws_instance_tags:

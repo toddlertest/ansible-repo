@@ -25,7 +25,7 @@
             image: "{{ aws.image_id }}"
             wait: true
             region: "{{ aws.region }}"
-            keypair: "{{ aws.keypair }}"
+            keypair: "{{ aws.keypair_name }}"
             count: "{{ aws.instance_count }}"
   register: ec2
   tags:
