@@ -6,11 +6,11 @@
     gather_facts: False
 
     roles:
-      - create_aws_instance
+      - create_aws_instance_strict_version
   - name: After creation
     hosts: ec2hosts
     become: true
     gather_facts: False
     roles:
        - common
-       - deploy_jenkins
+       #- deploy_jenkins

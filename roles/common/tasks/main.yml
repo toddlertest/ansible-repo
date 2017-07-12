@@ -1,4 +1,4 @@
 ---
 # tasks for common  roles
 - name: Install python minimal
-  raw: apt update -y &&apt install python-minimal -y
+  raw: apt update -y && apt install python-minimal -y

@@ -1,0 +1,23 @@
+---
+  #Default vars
+aws:
+  region: us-east-2
+  instance_type: t2.micro
+  instance_count: 2
+  image_id: ami-8b92b4ee
+  keypair_name: #Your keypair name#
+  security_group_name: default_sec_group_from_ansible_role
+  security_group_description: That group has been created from default settings
+  instance_tags:
+          main_role: roles_webserver
+sec_group_rules:
+               rule_1:
+                    proto: tcp
+                    from_port: 22
+                    to_port: 22
+                    cidr_ip: 0.0.0.0/0
+               rule_2:
+                    proto: tcp
+                    from_port: 9999
+                    to_port: 9999
+                    cidr_ip: 0.0.0.0/0
