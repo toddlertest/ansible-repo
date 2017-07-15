@@ -1,0 +1,18 @@
+---
+# tasks for deploy_docker role
+- name: Add Docker repo key to the system
+  apt_key:
+      keyserver: "{{ docker.keyserver }}"
+      id: "{{ docker.key_id }}"
+      #state: present
+
+- name: Add Docker repo to sources List
+  apt_repository:
+            repo: "{{ docker.url_repo }}"
+            state: present
+
+- name: Install Docker
+  apt: name=docker state=present update_cache=yes
+
+- name: Ensure the Docker is running
+  service: name=docker state=started enabled=yes
